@@ -14,40 +14,43 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="header dark-bg">
+    <header class="header">
       <div class="container">
         <nav class="navigation">
           <a class="logo" href="./"><img src="./images/logo.svg" width="69" height="56" alt="логотип барбершоп"/></a>
 
           <ul class="list menu">
-            <li class="menu-item"><a class="link menu-link" href="">О нас</a></li>
-            <li class="menu-item"><a class="link menu-link" href="">Услуги и цены</a></li>
-            <li class="menu-item"><a class="link menu-link" href="">Мастера</a></li>
-            <li class="menu-item"><a class="link menu-link" href="">Контакты</a></li>
+            <li class="menu-item"><a class="link menu-link" href="#about">О нас</a></li>
+            <li class="menu-item"><a class="link menu-link" href="#price">Услуги и цены</a></li>
+            <li class="menu-item"><a class="link menu-link" href="#team">Мастера</a></li>
+            <li class="menu-item"><a class="link menu-link" href="#contacts">Контакты</a></li>
           </ul>
         </nav>
         <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <a class="link button" href="">Онлайн-запись</a>
+        <a class="link button" href="#contact-us">Онлайн-запись</a>
       </div>
     </header>
     <main>
-      <section class="hero dark-bg">
-        <div class="container">
+      <section class="hero ">
+        <div class="container dark-bg">
           <div class="hero-content">
             <p class="title-label line" lang="en">A hair salon for men in Kyiv</p>
             <h1 class="title page-title" lang="en">BarberShop</h1>
             <p>Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
           </div>
-
-          <ul class="list socials-list line">
-            <li class="socials-item">
-              <a class="link" href="" target="_blank" rel="noopener noreferrer">Instagram</a>
-            </li>
-            <li class="socials-item"><a class="link" href="" target="_blank" rel="noopener noreferrer">Youtube</a></li>
-          </ul>
+          <div class="hero-sidebar">
+            <ul class="list socials-list line">
+              <li class="socials-item">
+                <a class="link" href="" target="_blank" rel="noopener noreferrer">Instagram</a>
+              </li>
+              <li class="socials-item">
+                <a class="link" href="" target="_blank" rel="noopener noreferrer">Youtube</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
-      <section class="section about">
+      <section class="section about" id="about">
         <div class="container flexbox">
           <ul class="list flexbox content-box">
             <li class="content-box">
@@ -66,11 +69,11 @@
               нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной
               волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button class="button" type="button">Онлайн-запись</button>
+            <button class="button" type="button" data-modal-open>Онлайн-запись</button>
           </div>
         </div>
       </section>
-      <section class="section price dark-bg">
+      <section class="section price dark-bg" id="price">
         <div class="container">
           <p class="title-label line">Проведи время в компании лучших мастеров</p>
           <h2 class="title section-title">Услуги и цены</h2>
@@ -83,6 +86,7 @@
                 <span class="price-item-serv">Бритье опасной бритвой</span><span>от 300 грн.</span>
               </li>
             </ul>
+
             <ul class="list price-list">
               <li class="price-item"><span class="price-item-serv">Cтрижка у стажера</span><span>от 50 грн.</span></li>
               <li class="price-item">
@@ -96,25 +100,25 @@
               </li>
             </ul>
           </div>
-          <a class="link button" href="">Онлайн-запись</a>
+          <a class="link button" href="#contact-us">Онлайн-запись</a>
         </div>
       </section>
       <section class="section benefits">
         <div class="container flexbox">
-          <ul class="list benefits-list content-box">
-            <li class="benefits-item">
-              <span class="benefits-number">600 <sup>+</sup> </span>
+          <ul class="list grid benefits-list content-box">
+            <li class="grid-item benefits-item">
+              <span class="benefits-number">600<sup>+</sup> </span>
               <p>Довольных клиентов в день</p>
             </li>
-            <li class="benefits-item">
+            <li class="grid-item benefits-item">
               <span class="benefits-number">50<sup>+</sup></span>
               <p>Наград за отличный сервис</p>
             </li>
-            <li class="benefits-item">
+            <li class="grid-item benefits-item">
               <span class="benefits-number">20<sup>+</sup></span>
               <p>Лучших мастеров Киева</p>
             </li>
-            <li class="benefits-item">
+            <li class="grid-item benefits-item">
               <span class="benefits-number">100<sup>+</sup></span>
               <p>Подарков постоянным клиентам</p>
             </li>
@@ -126,7 +130,7 @@
           </div>
         </div>
       </section>
-      <section class=" section team">
+      <section class=" section team" id="team">
         <div class="container">
           <p class="title-label line">для настоящих ценителей атмосферы</p>
           <h2 class="title section-title">Наши мастера</h2>
@@ -261,10 +265,10 @@
       </section>
       <div class="dark-bg">
         <div class="container flexbox">
-          <section class="section content-box">
+          <section class="section content-box" id="contact-us">
             <h2 class="title section-title">Онлайн-запись</h2>
           </section>
-          <section class="section content-box">
+          <section class="section content-box" id="contacts">
             <h2 class="title section-title">Контакты</h2>
             <address class="contacts-address">
               <ul class="list contacts-list">
@@ -316,5 +320,12 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn-close" data-modal-close>X</button>
+        <p class="modal-title">Свяжитесь с нами</p>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>

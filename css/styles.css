@@ -29,6 +29,8 @@
   --second-bg-color: #f7f7f7;
   --title-font: "Raleway", sans-serif;
   --grid-item: 2;
+
+  --animation: 300ms ease-in;
 }
 
 html {
@@ -83,6 +85,7 @@ address {
 .link {
   text-decoration: none;
   color: inherit;
+  transition: color var(--animation);
 }
 
 .link:hover,
@@ -140,7 +143,9 @@ address {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--title-color);
+  background-color: transparent;
   cursor: pointer;
+  transition: color var(--animation), background-color var(--animation);
 }
 
 .button:hover,
@@ -191,6 +196,7 @@ address {
   width: 20px;
   height: 20px;
   fill: var(--title-color);
+  transition: fill var(--animation);
 }
 
 .social-icons-link:hover .icon,
@@ -255,6 +261,11 @@ address {
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 600;
@@ -275,7 +286,24 @@ address {
 }
 
 .header .button {
+  color: #fff;
   margin-left: 40px;
+  border-color: currentColor;
+  animation-iteration-count: infinite;
+  animation-duration: 1500ms;
+  animation-name: sos;
+}
+
+@keyframes sos {
+  from {
+    background-color: var(--accent-color);
+    transform: scale(1);
+  }
+
+  to {
+    background-color: red;
+    transform: scale(1.2);
+  }
 }
 
 .navigation {
@@ -287,11 +315,12 @@ address {
 .hero {
   display: flex;
   align-items: center;
-  min-height: 100vh;
 }
 
 .hero .container {
-  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
   background-image: url(../images/hero/slider-img-3.jpg);
   background-repeat: no-repeat;
   background-position: 115px 0;
@@ -301,6 +330,25 @@ address {
   width: calc(100% / 12 * 5);
   max-width: 500px;
   margin-left: 200px;
+  padding-top: 272px;
+  padding-bottom: 206px;
+}
+
+.hero-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 115px;
+  padding-bottom: 40px;
+  background-color: #fff;
+}
+
+.hero-sidebar .socials-list {
+  transform: rotate(-90deg) translateX(50%);
 }
 
 .price {
@@ -348,6 +396,8 @@ address {
 }
 
 .benefits-item {
+  flex-basis: calc((100% - 2 * 30px) / 6 * 2);
+  padding: 20px 18px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -356,11 +406,28 @@ address {
   background-color: var(--second-bg-color);
 }
 
+.benefits-item:nth-child(odd) {
+  /* position: relative; */
+  /* bottom: -35px; */
+  transform: translateY(-17.5px);
+}
+
+.benefits-item:nth-child(even) {
+  transform: translateY(17.5px);
+}
+
 .benefits-number {
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
   letter-spacing: 0.05em;
+}
+
+.benefits-number > sup {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 16px;
+  vertical-align: super;
 }
 
 .team {
@@ -425,4 +492,61 @@ address {
 
 .dark-bg .title-label {
   --title-color: rgba(157, 164, 189, 0.6);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 120;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 28, 38, 0.603);
+  opacity: 1;
+  transition: opacity 500ms ease-out 200ms;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.is-hidden .modal {
+  transform: translate(100%, 100%) scale(0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+  max-width: 450px;
+  min-height: 450px;
+  padding: 40px 30px;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: transform 700ms ease-in-out 300ms;
+}
+
+.btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 50%;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  color: var(--title-color);
 }
