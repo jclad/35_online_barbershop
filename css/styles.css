@@ -290,19 +290,24 @@ address {
   margin-left: 40px;
   border-color: currentColor;
   animation-iteration-count: infinite;
-  animation-duration: 1500ms;
+  animation-duration: 2500ms;
   animation-name: sos;
 }
 
 @keyframes sos {
-  from {
+  0% {
     background-color: var(--accent-color);
     transform: scale(1);
   }
 
-  to {
+  50% {
     background-color: red;
     transform: scale(1.2);
+  }
+
+  100% {
+    background-color: var(--accent-color);
+    transform: scale(1);
   }
 }
 
@@ -451,6 +456,81 @@ address {
   color: var(--accent-color);
 }
 
+.contact-us:focus-within .section-title {
+  color: var(--accent-color);
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-field {
+  width: calc((100% - 30px) / 2);
+  padding-bottom: 8px;
+  margin-bottom: 44px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+}
+
+.form-field:focus {
+  outline: none;
+  border-bottom-color: #fff;
+}
+
+.form-field:focus::placeholder {
+  color: var(--second-bg-color);
+}
+
+.form-field:-webkit-autofill,
+.form-field:-webkit-autofill:hover,
+.form-field:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px var(--dark-bg-color) inset;
+}
+
+.form-field::placeholder,
+.form-field-text {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.form-message {
+  resize: none;
+  width: 100%;
+}
+
+.form-field:valid:not(:focus) {
+  color: green;
+}
+
+.form-field:invalid:not(:focus) {
+  color: red;
+}
+
+/* .form-field:required {
+  background-color: #ff6a0065;
+} */
+
+.contacts {
+  padding-left: 100px;
+  padding-right: 100px;
+  background-image: url(../images/contacts/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
 .contacts-address {
   margin-bottom: 70px;
 }
@@ -478,6 +558,16 @@ address {
 
 .gallery-item {
   --grid-item: 4;
+}
+
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .dark-bg {
@@ -522,11 +612,10 @@ address {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   min-height: 450px;
   padding: 40px 30px;
   border-radius: 30px;
-  background-color: #fff;
   transition: transform 700ms ease-in-out 300ms;
 }
 
@@ -548,5 +637,59 @@ address {
   font-weight: 700;
   font-size: 30px;
   text-align: center;
-  color: var(--title-color);
+}
+
+.modal .form-field-label {
+  width: calc((100% - 30px) / 2);
+  margin-bottom: 44px;
+}
+
+.form-field-text {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s linear;
+}
+
+.modal .form-field {
+  width: 100%;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.modal .form-field:not(:placeholder-shown) ~ .form-field-text {
+  top: 0;
+  left: 10px;
+  font-size: 10px;
+  transform: translateY(-100%);
+}
+
+.modal .form-field:focus + .form-field-icon {
+  stroke: #fff;
+}
+
+.modal .form-message {
+  margin-bottom: 44px;
+}
+
+.form-field-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+  stroke: rgba(157, 164, 189, 0.4);
+}
+
+.modal .form-field-label {
+  position: relative;
+}
+
+.button[disabled] {
+  color: grey;
+  background-color: lightgrey;
+  border-color: grey;
 }
