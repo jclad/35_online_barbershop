@@ -1,0 +1,29 @@
+.modal-form__field-label {
+  width: calc((100% - 30px) / 2);
+  margin-bottom: 44px;
+}
+
+.modal-form__field {
+  width: 100%;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.modal-form__field:not(:placeholder-shown) ~ .form__field-text {
+  top: 0;
+  left: 10px;
+  font-size: 10px;
+  transform: translateY(-100%);
+}
+
+.modal-form__field:focus + .form__field-icon {
+  stroke: #fff;
+}
+
+.modal-form__message {
+  margin-bottom: 44px;
+}
+
+.modal-form__field-label {
+  position: relative;
+}

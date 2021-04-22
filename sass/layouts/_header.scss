@@ -1,0 +1,50 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.header__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: 70px;
+}
+
+.header__button {
+  color: #fff;
+  margin-left: 40px;
+  border-color: currentColor;
+  animation-iteration-count: infinite;
+  animation-duration: 2500ms;
+  animation-name: sos;
+}
+
+@keyframes sos {
+  0% {
+    background-color: var(--accent-color);
+    transform: scale(1);
+  }
+
+  50% {
+    background-color: red;
+    transform: scale(1.2);
+  }
+
+  100% {
+    background-color: var(--accent-color);
+    transform: scale(1);
+  }
+}

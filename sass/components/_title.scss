@@ -1,0 +1,11 @@
+.title {
+  font-family: var(--title-font);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--title-color);
+  margin-bottom: 20px;
+}
+
+.title--light {
+  @extend %colorLight;
+}

@@ -1,0 +1,15 @@
+.title-label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--title-color);
+  margin-bottom: 20px;
+}
+
+.title-label--light {
+  --title-color: rgba(157, 164, 189, 0.6);
+}

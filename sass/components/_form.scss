@@ -1,0 +1,79 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__field {
+  width: calc((100% - 30px) / 2);
+  padding-bottom: 8px;
+  margin-bottom: 44px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+  &:focus {
+    outline: none;
+    border-bottom-color: #fff;
+  }
+
+  &:focus::placeholder {
+    color: var(--second-bg-color);
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px var(--section--dark-bg-color) inset;
+  }
+
+  &::placeholder {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+  }
+
+  &:valid:not(:focus) {
+    color: green;
+  }
+
+  &:invalid:not(:focus) {
+    color: red;
+  }
+}
+
+.form__field-text {
+  @extend .form__field::placeholder;
+}
+
+.form__message {
+  resize: none;
+  width: 100%;
+}
+
+.form__field-text {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s linear;
+}
+
+.form__field-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+  stroke: rgba(157, 164, 189, 0.4);
+}

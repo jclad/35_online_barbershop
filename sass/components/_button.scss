@@ -1,0 +1,31 @@
+.button {
+  min-width: 160px;
+  padding: 12px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--title-color);
+  background-color: transparent;
+  cursor: pointer;
+  transition: color var(--animation), background-color var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+}
+
+.button--disabled {
+  color: grey;
+  background-color: lightgrey;
+  border-color: grey;
+}
+
+.button--light {
+  @extend %colorLight;
+}

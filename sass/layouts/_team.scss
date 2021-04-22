@@ -1,0 +1,20 @@
+.team {
+  background-color: var(--second-bg-color);
+}
+
+.team__item {
+  --grid__item: 3;
+  text-align: center;
+}
+
+.team__member {
+  font-size: 18px;
+  line-height: 1.39;
+  color: var(--title-color);
+}
+
+.team__member-position {
+  font-size: 14px;
+  line-height: 1.36;
+  color: var(--accent-color);
+}
