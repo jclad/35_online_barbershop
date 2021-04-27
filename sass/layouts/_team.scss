@@ -3,8 +3,20 @@
 }
 
 .team__item {
-  --grid__item: 3;
+  --grid__item: 1;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    --grid__item: 3;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .team-list {
+    justify-content: center;
+  }
+  .team__item {
+    max-width: 450px;
+  }
 }
 
 .team__member {

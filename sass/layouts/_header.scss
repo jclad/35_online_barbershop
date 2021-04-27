@@ -1,8 +1,8 @@
 .header {
-  position: absolute;
+  // position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  // z-index: 100;
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -46,5 +46,11 @@
   100% {
     background-color: var(--accent-color);
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .header__contacts-wrap {
+    display: none;
   }
 }
