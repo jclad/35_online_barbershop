@@ -40,7 +40,7 @@
         </button>
       </div>
     </header>
-    <!-- <div class="mobile-overlay"> -->
+
     <div class="mobile-menu" data-menu>
       <ul class="list menu">
         <li class="menu__item"><a class="link menu__link" href="#about">О нас</a></li>
@@ -49,7 +49,7 @@
         <li class="menu__item"><a class="link menu__link" href="#contacts">Контакты</a></li>
       </ul>
     </div>
-    <!-- </div> -->
+
     <!--  <main>
       <section class="hero">
         <div class="container hero__container section--dark-bg">
@@ -92,40 +92,38 @@
             <button class="button" type="button" data-modal-open>Онлайн-запись</button>
           </div>
         </div>
-      </section>
-      <section class="section price section--dark-bg" id="price">
-        <div class="container">
-          <p class="title-label title-label--light line">Проведи время в компании лучших мастеров</p>
-          <h2 class="title section__title title--light">Услуги и цены</h2>
-          <div class="price__wrap">
-            <ul class="list price__list">
-              <li class="price__item"><span class="price__item-serv">Мужская стрижка</span><span>от 300 грн.</span></li>
-              <li class="price__item"><span class="price__item-serv">Стрижка бороды</span><span>от 300 грн.</span></li>
-              <li class="price__item"><span class="price__item-serv">Стрижка усов</span><span>от 300 грн.</span></li>
-              <li class="price__item">
-                <span class="price__item-serv">Бритье опасной бритвой</span><span>от 300 грн.</span>
-              </li>
-            </ul>
+      </section> -->
+    <section class="section price section--dark-bg" id="price">
+      <div class="container">
+        <p class="title-label title-label--light line">Проведи время в компании лучших мастеров</p>
+        <h2 class="title section__title title--light">Услуги и цены</h2>
+        <div class="price__wrap">
+          <ul class="list price__list">
+            <li class="price__item"><span class="price__item-serv">Мужская стрижка</span><span>от 300 грн.</span></li>
+            <li class="price__item"><span class="price__item-serv">Стрижка бороды</span><span>от 300 грн.</span></li>
+            <li class="price__item"><span class="price__item-serv">Стрижка усов</span><span>от 300 грн.</span></li>
+            <li class="price__item">
+              <span class="price__item-serv">Бритье опасной бритвой</span><span>от 300 грн.</span>
+            </li>
+          </ul>
 
-            <ul class="list price__list">
-              <li class="price__item">
-                <span class="price__item-serv">Cтрижка у стажера</span><span>от 50 грн.</span>
-              </li>
-              <li class="price__item">
-                <span class="price__item-serv">Стрижка под насадку</span><span>от 200 грн.</span>
-              </li>
-              <li class="price__item">
-                <span class="price__item-serv">Детская стрижка (до 12 лет)</span><span>от 300 грн.</span>
-              </li>
-              <li class="price__item">
-                <span class="price__item-serv">Камуфлирование седины</span><span>от 200 грн.</span>
-              </li>
-            </ul>
-          </div>
-          <a class="link button button--light" href="#contact-us">Онлайн-запись</a>
+          <ul class="list price__list">
+            <li class="price__item"><span class="price__item-serv">Cтрижка у стажера</span><span>от 50 грн.</span></li>
+            <li class="price__item">
+              <span class="price__item-serv">Стрижка под насадку</span><span>от 200 грн.</span>
+            </li>
+            <li class="price__item">
+              <span class="price__item-serv">Детская стрижка (до 12 лет)</span><span>от 300 грн.</span>
+            </li>
+            <li class="price__item">
+              <span class="price__item-serv">Камуфлирование седины</span><span>от 200 грн.</span>
+            </li>
+          </ul>
         </div>
-      </section>
-      <section class="section benefits">
+        <a class="link button button--light" href="#contact-us">Онлайн-запись</a>
+      </div>
+    </section>
+    <!-- <section class="section benefits">
         <div class="container flexbox">
           <ul class="list grid benefits-list content-box">
             <li class="grid__item benefits__item">
@@ -158,7 +156,40 @@
         <h2 class="title section__title">Наши мастера</h2>
         <ul class="list team-list grid">
           <li class="grid__item team__item">
-            <img src="./images/team/img1.jpg" width="370" height="346" alt="барбер Джон Смит" />
+            <picture>
+              <source
+                srcset="./images/team/desktop/img1_desktop.webp 1x, ./images/team/desktop/img1@2x_desktop.webp 2x"
+                media="(min-width: 1200px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/team/tablet/img1_tablet.webp 1x, ./images/team/tablet/img1@2x_tablet.webp 2x"
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/team/mobile/img1_mobile.webp 1x, ./images/team/mobile/img1@2x_mobile.webp 2x"
+                media="(max-width: 767px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/team/desktop/img1_desktop.jpg 1x, ./images/team/desktop/img1@2x_desktop.jpg 2x"
+                media="(min-width: 1200px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="./images/team/tablet/img1_tablet.jpg 1x, ./images/team/tablet/img1@2x_tablet.jpg 2x"
+                media="(min-width: 768px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="./images/team/mobile/img1_mobile.jpg 1x, ./images/team/mobile/img1@2x_mobile.jpg 2x"
+                media="(max-width: 767px)"
+                type="image/jpeg"
+              />
+              <img src="./images/team/desktop/img1_desktop.jpg" width="450" alt="барбер Джон Смит" />
+            </picture>
+
             <h3 class="team__member ">John Smith</h3>
             <p class="team__member-position">Extreme Barber</p>
             <ul class="list social-icons">
@@ -193,7 +224,41 @@
             </ul>
           </li>
           <li class="grid__item team__item">
-            <img src="./images/team/img2.jpg" width="370" height="346" alt="барбер Микаель Доу" />
+            <picture>
+              <source
+                srcset="./images/team/desktop/img2_desktop.webp 1x, ./images/team/desktop/img2@2x_desktop.webp 2x"
+                media="(min-width: 1200px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/team/tablet/img2_tablet.webp 1x, ./images/team/tablet/img2@2x_tablet.webp 2x"
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/team/mobile/img2_mobile.webp 1x, ./images/team/mobile/img2@2x_mobile.webp 2x"
+                media="(max-width: 767px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/team/desktop/img2_desktop.jpg 1x, ./images/team/desktop/img2@2x_desktop.jpg 2x"
+                media="(min-width: 1200px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="./images/team/tablet/img2_tablet.jpg 1x, ./images/team/tablet/img2@2x_tablet.jpg 2x"
+                media="(min-width: 768px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="./images/team/mobile/img2_mobile.jpg 1x, ./images/team/mobile/img2@2x_mobile.jpg 2x"
+                media="(max-width: 767px)"
+                type="image/jpeg"
+              />
+
+              <img src="./images/team/desktop/img2_desktop.jpg" width="450" alt="барбер Микаель Доу" />
+            </picture>
+
             <h3 class="team__member ">Michele Doe</h3>
             <p class="team__member-position">Extreme Barber</p>
             <ul class="list social-icons">
@@ -228,7 +293,40 @@
             </ul>
           </li>
           <li class="grid__item team__item">
-            <img src="./images/team/img3.jpg" width="370" height="346" alt="барбер Алан Блэк" />
+            <picture>
+              <source
+                srcset="./images/team/desktop/img3_desktop.webp 1x, ./images/team/desktop/img3@2x_desktop.webp 2x"
+                media="(min-width: 1200px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/team/tablet/img3_tablet.webp 1x, ./images/team/tablet/img3@2x_tablet.webp 2x"
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/team/mobile/img3_mobile.webp 1x, ./images/team/mobile/img3@2x_mobile.webp 2x"
+                media="(max-width: 767px)"
+                type="image/webp"
+              />
+              <source
+                srcset="./images/team/desktop/img3_desktop.jpg 1x, ./images/team/desktop/img3@2x_desktop.jpg 2x"
+                media="(min-width: 1200px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="./images/team/tablet/img3_tablet.jpg 1x, ./images/team/tablet/img3@2x_tablet.jpg 2x"
+                media="(min-width: 768px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="./images/team/mobile/img3_mobile.jpg 1x, ./images/team/mobile/img3@2x_mobile.jpg 2x"
+                media="(max-width: 767px)"
+                type="image/jpeg"
+              />
+              <img src="./images/team/desktop/img3_desktop.jpg" width="450" alt="барбер Алан Блэк" />
+            </picture>
+
             <h3 class="team__member ">Alan Black</h3>
             <p class="team__member-position">Extreme Barber</p>
             <ul class="list social-icons">
